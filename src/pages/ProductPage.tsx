@@ -1,261 +1,277 @@
 
-import { useState } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-
-type ChipFeature = {
-  id: number;
-  title: string;
-  description: string;
-  position: string;
-  color: string;
-};
 
 const ProductPage = () => {
-  const [activeFeature, setActiveFeature] = useState<number | null>(null);
-
-  const features: ChipFeature[] = [
-    {
-      id: 1,
-      title: "Cell Culture Chamber",
-      description: "Transparent microchamber designed for optimal cell growth and visualization, supporting various cell types in a physiologically relevant environment.",
-      position: "top-[25%] right-[20%]",
-      color: "border-orange-500",
-    },
-    {
-      id: 2,
-      title: "Media Reservoir",
-      description: "Provides continuous nutrient supply and waste removal through microfluidic channels, maintaining stable culture conditions.",
-      position: "top-[20%] right-[10%]",
-      color: "border-orange-500",
-    },
-    {
-      id: 3,
-      title: "Central Hub",
-      description: "Control center that integrates fluid flow and sensor data, ensuring precise experimental conditions.",
-      position: "top-[35%] left-[50%] transform -translate-x-1/2",
-      color: "border-orange-500",
-    },
-    {
-      id: 4,
-      title: "Flow Regulator",
-      description: "Purple valve system that controls fluid dynamics with precision, simulating physiological shear stress on cells.",
-      position: "top-[40%] left-[15%]",
-      color: "border-purple-500",
-    },
-    {
-      id: 5,
-      title: "Sensor Interface",
-      description: "Integrated biosensors for real-time monitoring of cellular responses and microenvironment parameters.",
-      position: "top-[50%] left-[15%]",
-      color: "border-orange-500",
-    },
-    {
-      id: 6,
-      title: "Base Platform",
-      description: "Durable foundation that houses all components and provides stable temperature control for consistent experiments.",
-      position: "bottom-[15%] left-[20%]",
-      color: "border-orange-500",
-    }
-  ];
-
-  const handleFeatureClick = (id: number) => {
-    setActiveFeature(id === activeFeature ? null : id);
-  };
-
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen bg-white">
       <Navbar />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-800 to-purple-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
-            Liver-on-Chip Technology (LTC)
-          </h1>
-          <p className="text-xl max-w-3xl text-center mb-8">
-            Advanced microfluidic platform that replicates human liver function for more predictive drug testing and toxicology studies.
-          </p>
-          <div className="w-16 h-1 bg-orange-400 mb-8"></div>
-          <Button className="bg-white text-purple-700 hover:bg-gray-100">
-            Download Technical Specifications
-          </Button>
+      <section className="relative bg-gradient-to-r from-purple-800 to-purple-700 text-white overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 0 10 L 40 10 M 10 0 L 10 40" stroke="white" strokeWidth="0.5" fill="none" />
+              </pattern>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="20" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+            <circle cx="400" cy="400" r="150" fill="white" opacity="0.1" filter="url(#glow)" />
+          </svg>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative py-20 md:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                Liver-Tissue-Chip 
+                <span className="text-orange-300"> (LTC) Platform</span>
+              </h1>
+              <p className="text-lg mb-8 max-w-xl">
+                Our revolutionary organ-on-chip technology recreates the complex microenvironment of the human liver, enabling more predictive drug testing and disease modeling.
+              </p>
+              <Button asChild size="lg" className="bg-white text-purple-700 hover:bg-gray-100">
+                <a href="#features">Explore Features</a>
+              </Button>
+            </div>
+            
+            <div className="relative flex justify-center">
+              <div className="absolute inset-0 bg-orange-400 opacity-20 rounded-full blur-3xl"></div>
+              <div className="glass-panel p-6 rounded-xl shadow-2xl animate-fade-up" style={{animationDelay: "0.3s"}}>
+                <img 
+                  src="/lovable-uploads/279f40b1-bfc3-42ec-bb19-b9b37f27e875.png"
+                  alt="LTC Chip" 
+                  className="rounded-lg w-full"
+                />
+                <div className="mt-4 text-center">
+                  <span className="inline-block px-3 py-1 bg-orange-500/20 text-orange-400 text-sm font-medium rounded-full">
+                    Next-Generation Liver Model
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120L48 110C96 100 192 80 288 75C384 70 480 80 576 85C672 90 768 90 864 80C960 70 1056 50 1152 45C1248 40 1344 50 1392 55L1440 60V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0Z" fill="white"/>
+          </svg>
         </div>
       </section>
       
-      {/* Interactive Product Showcase */}
-      <section className="py-20 bg-white">
+      {/* Interactive Features Section */}
+      <section id="features" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-4">Interactive LTC Chip</h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-16">
-            Explore our breakthrough Liver-on-Chip technology by clicking on different components to learn about their function and capabilities.
-          </p>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">LTC Platform Features</h2>
+            <div className="section-divider mx-auto"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our innovative platform combines advanced microfluidics, tissue engineering, and real-time monitoring for unprecedented liver modeling capabilities.
+            </p>
+          </div>
           
-          <div className="relative max-w-3xl mx-auto">
-            {/* Product Image */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            <div className="order-2 lg:order-1">
+              <h3 className="text-2xl font-bold mb-6 text-purple-700">Advanced Microfluidic System</h3>
+              <p className="text-gray-600 mb-6">
+                The LTC incorporates a precision-engineered microfluidic network that replicates physiological fluid flows and forces found in the human liver microenvironment.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-medium">Flow Control:</span> Precise regulation of media flow rates simulating blood flow through liver sinusoids
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-medium">Multiple Chambers:</span> Compartmentalized design allows for simulation of zonation and different liver regions
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-medium">Low Shear Stress:</span> Optimized fluid dynamics maintain cell integrity while allowing nutrient and oxygen exchange
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="order-1 lg:order-2 relative">
+              <div className="absolute top-0 right-0 w-4/5 h-4/5 bg-orange-400 opacity-10 rounded-full blur-3xl"></div>
+              <img 
+                src="/lovable-uploads/aa2e95a7-f49c-4130-83ec-bc2cd7a9dd52.png" 
+                alt="Microfluidic System" 
+                className="rounded-lg shadow-xl w-full relative z-10"
+              />
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="relative">
+              <div className="absolute top-0 left-0 w-4/5 h-4/5 bg-purple-400 opacity-10 rounded-full blur-3xl"></div>
+              <img 
+                src="/lovable-uploads/dfcc8a55-cea3-4d10-90e0-0a33578dac10.png" 
+                alt="Cell Integration" 
+                className="rounded-lg shadow-xl w-full relative z-10"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-purple-700">Multi-Cellular Architecture</h3>
+              <p className="text-gray-600 mb-6">
+                The LTC platform supports the co-culture of multiple human liver cell types, recreating the complex cellular interactions crucial for authentic liver function.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-medium">Primary Hepatocytes:</span> Maintains differentiated functions including metabolism, protein synthesis, and detoxification
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-medium">Non-Parenchymal Cells:</span> Includes Kupffer cells, stellate cells, and liver sinusoidal endothelial cells
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-medium">Cell Viability:</span> &gt;95% for up to 14 days
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+            <div className="order-2 lg:order-1">
+              <h3 className="text-2xl font-bold mb-6 text-purple-700">Integrated Sensing Technology</h3>
+              <p className="text-gray-600 mb-6">
+                The LTC incorporates multiple non-invasive sensors for real-time monitoring of key physiological parameters and cellular responses.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-medium">Oxygen Sensors:</span> Monitor oxygen gradients across different zones
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-medium">pH Monitoring:</span> Continuous tracking of metabolic activity and media conditions
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-4 h-4 bg-purple-500 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                  <div>
+                    <span className="font-medium">Temperature Control:</span> Precise thermal regulation of the microenvironment
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="order-1 lg:order-2 relative">
+              <div className="absolute top-0 right-0 w-4/5 h-4/5 bg-orange-400 opacity-10 rounded-full blur-3xl"></div>
               <img 
                 src="/lovable-uploads/279f40b1-bfc3-42ec-bb19-b9b37f27e875.png" 
-                alt="Javelin LTC Chip" 
-                className="w-full"
+                alt="Sensing Technology" 
+                className="rounded-lg shadow-xl w-full relative z-10"
               />
-              
-              {/* Feature Points */}
-              {features.map((feature) => (
-                <div 
-                  key={feature.id}
-                  onClick={() => handleFeatureClick(feature.id)}
-                  className={cn(
-                    "absolute w-8 h-8 rounded-full flex items-center justify-center cursor-pointer transition-all",
-                    activeFeature === feature.id ? "scale-125 z-20" : "z-10",
-                    activeFeature && activeFeature !== feature.id ? "opacity-50" : "opacity-100",
-                    feature.color === "border-purple-500" ? "bg-purple-500" : "bg-orange-500"
-                  )}
-                  style={{
-                    left: feature.position.includes("left") ? feature.position.split("left-")[1].split("]")[0] : "auto",
-                    right: feature.position.includes("right") ? feature.position.split("right-")[1].split("]")[0] : "auto",
-                    top: feature.position.includes("top") ? feature.position.split("top-")[1].split("]")[0] : "auto",
-                    bottom: feature.position.includes("bottom") ? feature.position.split("bottom-")[1].split("]")[0] : "auto",
-                    transform: feature.position.includes("transform") ? "translate(-50%, -50%)" : "none"
-                  }}
-                >
-                  <span className="text-white font-bold">{feature.id}</span>
-                </div>
-              ))}
-            </div>
-            
-            {/* Feature Description Box */}
-            <div className="mt-8">
-              {activeFeature ? (
-                <div className="bg-gray-50 border-l-4 border-purple-600 p-6 rounded-r-lg animate-fade-in">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    {features.find(f => f.id === activeFeature)?.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {features.find(f => f.id === activeFeature)?.description}
-                  </p>
-                </div>
-              ) : (
-                <div className="text-center p-6 bg-gray-50 rounded-lg">
-                  <p className="text-gray-500">Click on a numbered point to learn about each feature</p>
-                </div>
-              )}
             </div>
           </div>
         </div>
       </section>
       
-      {/* Key Benefits Section */}
+      {/* Summary Visualization Section */}
       <section className="py-20 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-16">Key Benefits of LTC Platform</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Complete LTC Solution</h2>
+            <div className="section-divider mx-auto"></div>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our integrated platform delivers unprecedented capabilities for drug development, disease modeling, and precision medicine applications.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-orange-600">
-                  <path d="M9 12h.01M15 12h.01M12 9a3 3 0 0 0-2.83 4" />
-                  <path d="M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0Z" />
-                </svg>
+          <div className="bg-white rounded-xl shadow-xl overflow-hidden">
+            <div className="p-8 md:p-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="bg-purple-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-purple-600">
+                      <path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"></path>
+                      <path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"></path>
+                      <circle cx="12" cy="12" r="2"></circle>
+                      <path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"></path>
+                      <path d="M19.1 4.9C23 8.8 23 15.1 19.1 19"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 text-gray-900">Microfluidics</h3>
+                  <p className="text-gray-600">Recreates physiological fluid flow and mechanical forces critical for liver function</p>
+                </div>
+                
+                <div className="bg-orange-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+                  <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-orange-600">
+                      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 text-gray-900">Cell Integration</h3>
+                  <p className="text-gray-600">Supports multiple primary human cell types to recreate liver complexity</p>
+                </div>
+                
+                <div className="bg-purple-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
+                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-purple-600">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 text-gray-900">Real-Time Monitoring</h3>
+                  <p className="text-gray-600">Built-in sensors capture vital data for comprehensive analysis</p>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-2">Enhanced Predictivity</h3>
-              <p className="text-gray-600">More accurately predicts human responses compared to traditional cell culture and animal models.</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-600">
-                  <path d="M9 18h6" />
-                  <path d="M20 4v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2Z" />
-                  <path d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                </svg>
+              
+              <div className="mt-12 text-center">
+                <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Our LTC platform maintains functionality for extended study periods, enabling both acute and chronic testing protocols with reliable, reproducible results.
+                </p>
+                
+                <div className="inline-flex flex-wrap justify-center gap-4">
+                  <span className="py-2 px-4 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Metabolism Studies</span>
+                  <span className="py-2 px-4 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">Toxicity Screening</span>
+                  <span className="py-2 px-4 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Disease Modeling</span>
+                  <span className="py-2 px-4 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">Drug Efficacy</span>
+                  <span className="py-2 px-4 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Personalized Medicine</span>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-2">Real-time Monitoring</h3>
-              <p className="text-gray-600">Continuous observation of cellular responses provides dynamic data throughout experiments.</p>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-orange-600">
-                  <path d="M20 12V8H6a2 2 0 1 1 0-4h12v4" />
-                  <path d="M4 6v12c0 1.1.9 2 2 2h14v-4" />
-                  <path d="M18 12a2 2 0 1 0 0 4h2v-4Z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Cost Efficiency</h3>
-              <p className="text-gray-600">Reduces drug development costs by identifying failures earlier in the process.</p>
             </div>
           </div>
         </div>
       </section>
       
-      {/* Technical Specifications */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-16">Technical Specifications</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-purple-700">Physical Properties</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="w-4 h-4 bg-orange-500 rounded-full mt-1 mr-3 flex-shrink-0"></span>
-                  <div>
-                    <span className="font-medium">Dimensions:</span> 75mm × 25mm × 15mm
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-4 h-4 bg-orange-500 rounded-full mt-1 mr-3 flex-shrink-0"></span>
-                  <div>
-                    <span className="font-medium">Material:</span> Medical-grade transparent polymer
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-4 h-4 bg-orange-500 rounded-full mt-1 mr-3 flex-shrink-0"></span>
-                  <div>
-                    <span className="font-medium">Cell Chamber Volume:</span> 50-200 μL (adjustable)
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-4 h-4 bg-orange-500 rounded-full mt-1 mr-3 flex-shrink-0"></span>
-                  <div>
-                    <span className="font-medium">Media Reservoir Capacity:</span> Up to 2mL
-                  </div>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-purple-700">Performance</h3>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <span className="w-4 h-4 bg-purple-500 rounded-full mt-1 mr-3 flex-shrink-0"></span>
-                  <div>
-                    <span className="font-medium">Flow Rate Range:</span> 0.1-10 μL/min
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-4 h-4 bg-purple-500 rounded-full mt-1 mr-3 flex-shrink-0"></span>
-                  <div>
-                    <span className="font-medium">Cell Viability:</span> >95% for up to 14 days
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-4 h-4 bg-purple-500 rounded-full mt-1 mr-3 flex-shrink-0"></span>
-                  <div>
-                    <span className="font-medium">Sensor Types:</span> Oxygen, pH, metabolite detection
-                  </div>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-4 h-4 bg-purple-500 rounded-full mt-1 mr-3 flex-shrink-0"></span>
-                  <div>
-                    <span className="font-medium">Imaging Compatibility:</span> Compatible with standard microscopy techniques
-                  </div>
-                </li>
-              </ul>
-            </div>
+      {/* Call to Action */}
+      <section className="py-16 bg-gradient-to-r from-purple-800 to-purple-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Research?</h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Schedule a demonstration or consultation with our team to explore how our LTC platform can enhance your drug development pipeline.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button asChild className="bg-white text-purple-700 hover:bg-gray-100">
+              <Link to="/applications">Explore Applications</Link>
+            </Button>
+            <Button asChild variant="outline" className="border-white text-white hover:bg-white/10">
+              <Link to="/contact">Contact Us</Link>
+            </Button>
           </div>
         </div>
       </section>
