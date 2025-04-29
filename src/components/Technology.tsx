@@ -7,7 +7,7 @@ const Technology = () => {
       title: "Microfluidic Precision",
       description: "Our proprietary microfluidic chip design provides precise control over fluid flow, mimicking in vivo conditions.",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-biotech-600">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-600">
           <path d="M6 18h8" />
           <path d="M3 22h18" />
           <path d="M14 22a7 7 0 1 0 0-14h-1" />
@@ -23,7 +23,7 @@ const Technology = () => {
       title: "Human Cell Integration",
       description: "Culture multiple primary human cell types in a physiologically relevant microenvironment.",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-biotech-600">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-600">
           <circle cx="12" cy="12" r="10" />
           <path d="M8 12a4.86 4.86 0 0 0 4 2 4.86 4.86 0 0 0 4-2" />
           <path d="M8 12a4.86 4.86 0 0 1 4-2 4.86 4.86 0 0 1 4 2" />
@@ -35,7 +35,7 @@ const Technology = () => {
       title: "Real-time Monitoring",
       description: "Continuous monitoring of cellular responses using embedded biosensors and imaging capabilities.",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-biotech-600">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-600">
           <path d="m3 3 7.07 16.97 2.51-7.39 7.39-2.51L3 3z" />
           <path d="m13 13 6 6" />
         </svg>
@@ -45,7 +45,7 @@ const Technology = () => {
       title: "Multi-Organ Systems",
       description: "Connect multiple organ models to study complex inter-organ interactions and systemic drug effects.",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-biotech-600">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-600">
           <path d="M4 6V4c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v2" />
           <path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6" />
           <path d="M8 18v-7.7a4 4 0 0 1 8 0V18" />
@@ -77,7 +77,7 @@ const Technology = () => {
           </div>
           <div className="flex justify-center items-center">
             <div className="relative w-full max-w-md">
-              <div className="absolute top-0 right-0 w-4/5 h-4/5 bg-biotech-400 opacity-20 rounded-full blur-3xl -z-10"></div>
+              <div className="absolute top-0 right-0 w-4/5 h-4/5 bg-orange-400 opacity-20 rounded-full blur-3xl -z-10"></div>
               <img 
                 src="https://source.unsplash.com/photo-1485827404703-89b55fcc595e" 
                 alt="Microfluidic chip design" 

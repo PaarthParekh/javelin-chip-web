@@ -43,14 +43,14 @@ const Research = () => {
             <Card key={index} className="bg-white border border-gray-200 hover:shadow-md transition-shadow">
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
-                  <div className="h-8 w-1 bg-biotech-600 mr-3"></div>
-                  <p className="text-sm font-medium text-biotech-600">{pub.journal} • {pub.year}</p>
+                  <div className="h-8 w-1 bg-purple-600 mr-3"></div>
+                  <p className="text-sm font-medium text-purple-600">{pub.journal} • {pub.year}</p>
                 </div>
                 <h3 className="text-lg font-semibold mb-3 line-clamp-2">{pub.title}</h3>
                 <p className="text-gray-500 text-sm mb-4">{pub.authors}</p>
                 <a 
                   href={pub.url} 
-                  className="text-biotech-600 hover:text-biotech-800 font-medium text-sm flex items-center"
+                  className="text-purple-600 hover:text-purple-800 font-medium text-sm flex items-center"
                 >
                   View Publication
                   <svg className="ml-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
@@ -62,18 +62,18 @@ const Research = () => {
           ))}
         </div>
         
-        <div className="bg-gradient-to-r from-biotech-700 to-biotech-800 rounded-xl overflow-hidden shadow-xl">
+        <div className="bg-gradient-to-r from-purple-700 to-purple-800 rounded-xl overflow-hidden shadow-xl">
           <div className="grid grid-cols-1 md:grid-cols-2">
             <div className="p-8 md:p-12 flex flex-col justify-center">
               <h3 className="text-2xl font-bold text-white mb-4">Research Collaborations</h3>
-              <p className="text-biotech-100 mb-6">
+              <p className="text-purple-100 mb-6">
                 We partner with academic institutions, pharmaceutical companies, and government agencies to advance organ-on-chip technology and applications. Our collaborative approach accelerates innovation in drug discovery and development.
               </p>
-              <Button asChild className="bg-white text-biotech-800 hover:bg-gray-100 self-start">
+              <Button asChild className="bg-orange-500 text-white hover:bg-orange-600 self-start">
                 <a href="#contact">Explore Partnerships</a>
               </Button>
             </div>
-            <div className="relative h-64 md:h-auto bg-biotech-900">
+            <div className="relative h-64 md:h-auto bg-purple-900">
               <div className="absolute inset-0">
                 <img 
                   src="https://source.unsplash.com/photo-1518770660439-4636190af475" 
@@ -81,7 +81,7 @@ const Research = () => {
                   className="w-full h-full object-cover opacity-50"
                 />
               </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-biotech-700/90 via-biotech-800/50 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-700/90 via-purple-800/50 to-transparent"></div>
             </div>
           </div>
         </div>

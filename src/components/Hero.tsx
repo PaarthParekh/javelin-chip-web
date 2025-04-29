@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-r from-biotech-800 to-biotech-600 text-white">
+    <div className="relative overflow-hidden bg-gradient-to-r from-purple-800 to-purple-600 text-white">
       {/* Background abstract shape */}
       <div className="absolute inset-0 z-0 opacity-20">
         <svg width="100%" height="100%" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
@@ -27,13 +27,13 @@ const Hero = () => {
           <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
               Advanced Organ-On-Chip <br className="hidden md:block" />
-              <span className="text-teal-300">Technology Platform</span>
+              <span className="text-orange-300">Technology Platform</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-100 max-w-lg animate-fade-up">
               Accelerating drug discovery with microfluidic human-relevant in vitro models that revolutionize preclinical testing.
             </p>
             <div className="space-x-4 animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <Button asChild size="lg" className="bg-white text-biotech-700 hover:bg-gray-200">
+              <Button asChild size="lg" className="bg-white text-purple-700 hover:bg-gray-200">
                 <a href="#technology">Learn More</a>
               </Button>
               <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
@@ -44,7 +44,7 @@ const Hero = () => {
           
           <div className="md:w-1/2 flex justify-center animate-fade-in">
             <div className="relative w-full max-w-md">
-              <div className="absolute top-0 left-0 w-full h-full bg-teal-400 opacity-20 rounded-full blur-3xl"></div>
+              <div className="absolute top-0 left-0 w-full h-full bg-orange-400 opacity-20 rounded-full blur-3xl"></div>
               <div className="relative glass-panel p-6 rounded-xl shadow-2xl">
                 <img 
                   src="https://source.unsplash.com/photo-1581090464777-f3220bbe1b8b" 
@@ -52,7 +52,7 @@ const Hero = () => {
                   className="rounded-lg w-full"
                 />
                 <div className="mt-4 text-center">
-                  <span className="inline-block px-3 py-1 bg-teal-500/10 text-teal-500 text-sm font-medium rounded-full">
+                  <span className="inline-block px-3 py-1 bg-orange-500/10 text-orange-500 text-sm font-medium rounded-full">
                     Next-Generation Preclinical Testing
                   </span>
                 </div>

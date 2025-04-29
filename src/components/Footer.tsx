@@ -33,16 +33,16 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Technology</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#technology" className="text-gray-400 hover:text-white">Platform Overview</a>
+                <a href="#technology" className="text-gray-400 hover:text-orange-400">Platform Overview</a>
               </li>
               <li>
-                <a href="#applications" className="text-gray-400 hover:text-white">Applications</a>
+                <a href="#applications" className="text-gray-400 hover:text-orange-400">Applications</a>
               </li>
               <li>
-                <a href="#research" className="text-gray-400 hover:text-white">Research</a>
+                <a href="#research" className="text-gray-400 hover:text-orange-400">Research</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">Case Studies</a>
+                <a href="#" className="text-gray-400 hover:text-orange-400">Case Studies</a>
               </li>
             </ul>
           </div>
@@ -51,16 +51,16 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#team" className="text-gray-400 hover:text-white">About Us</a>
+                <a href="#team" className="text-gray-400 hover:text-orange-400">About Us</a>
               </li>
               <li>
-                <a href="#team" className="text-gray-400 hover:text-white">Team</a>
+                <a href="#team" className="text-gray-400 hover:text-orange-400">Team</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">Careers</a>
+                <a href="#" className="text-gray-400 hover:text-orange-400">Careers</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white">News</a>
+                <a href="#" className="text-gray-400 hover:text-orange-400">News</a>
               </li>
             </ul>
           </div>
@@ -74,9 +74,9 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Your email"
-                className="rounded-md px-4 py-2 w-full text-sm bg-gray-800 text-white border border-gray-700 focus:border-biotech-500 focus:outline-none"
+                className="rounded-md px-4 py-2 w-full text-sm bg-gray-800 text-white border border-gray-700 focus:border-purple-500 focus:outline-none"
               />
-              <Button className="bg-biotech-600 hover:bg-biotech-700">
+              <Button className="bg-orange-600 hover:bg-orange-700">
                 Subscribe
               </Button>
             </form>
@@ -89,9 +89,9 @@ const Footer = () => {
           </div>
           
           <div className="flex space-x-6">
-            <a href="#" className="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white">Terms of Service</a>
-            <a href="#" className="text-sm text-gray-400 hover:text-white">Cookie Policy</a>
+            <a href="#" className="text-sm text-gray-400 hover:text-orange-400">Privacy Policy</a>
+            <a href="#" className="text-sm text-gray-400 hover:text-orange-400">Terms of Service</a>
+            <a href="#" className="text-sm text-gray-400 hover:text-orange-400">Cookie Policy</a>
           </div>
         </div>
       </div>
