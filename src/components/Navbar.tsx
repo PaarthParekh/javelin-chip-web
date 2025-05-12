@@ -11,28 +11,40 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  
+
   return (
+
     <nav className="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-20">
           <div className="flex items-center">
+            <Link to="/" className="flex-shrink-0 flex items-center">
+              <img
+                src="/Javelin-Biotech_LOGO.png"
+                alt="Javelin Biotech"
+                className="h-14 w-auto"
+                loading="eager"
+                fetchPriority="high"
+              />
+            </Link>
+          </div>
+          {/* <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
               <span className="text-2xl font-bold text-purple-700">Javelin Biotech</span>
             </Link>
-          </div>
-          
+          </div> */}
+
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/products" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Products</Link>
-            <Link to="/applications" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Applications</Link>
-            <Link to="/blog" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Blog</Link>
-            <Link to="/about" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">About</Link>
+            <Link to="/products" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-md font-medium">Products</Link>
+            <Link to="/applications" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-md font-medium">Applications</Link>
+            <Link to="/blog" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-md font-medium">Blog</Link>
+            <Link to="/about" className="text-gray-700 hover:text-purple-600 px-3 py-2 text-md font-medium">About</Link>
             <Button asChild className="ml-4 bg-orange-600 hover:bg-orange-700">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <Button
@@ -46,7 +58,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Menu */}
       <div className={cn(
         "md:hidden",

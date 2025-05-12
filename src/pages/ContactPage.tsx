@@ -37,7 +37,7 @@ const ContactPage = () => {
     subscribeNewsletter: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -45,14 +45,14 @@ const ContactPage = () => {
       [name]: value
     }));
   };
-  
+
   const handleSelectChange = (value: string) => {
     setFormData(prev => ({
       ...prev,
       inquiryType: value
     }));
   };
-  
+
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = e.target;
     setFormData(prev => ({
@@ -60,11 +60,11 @@ const ContactPage = () => {
       [name]: checked
     }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast({
@@ -83,11 +83,11 @@ const ContactPage = () => {
       setIsSubmitting(false);
     }, 1000);
   };
-  
+
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-800 to-purple-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -99,7 +99,7 @@ const ContactPage = () => {
           </p>
         </div>
       </section>
-      
+
       {/* Contact Form & Info */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,7 +107,7 @@ const ContactPage = () => {
             {/* Contact Information */}
             <div className="order-2 lg:order-1">
               <h2 className="text-2xl font-bold mb-6 text-gray-900">Get in Touch</h2>
-              
+
               <div className="space-y-8">
                 <div className="flex">
                   <div className="flex-shrink-0">
@@ -121,11 +121,11 @@ const ContactPage = () => {
                   <div className="ml-6">
                     <h3 className="text-lg font-semibold text-gray-900">Visit Us</h3>
                     <p className="mt-2 text-gray-600">
-                      100 Innovation Drive<br />
-                      Cambridge, MA 02142<br />
+                      299 Washington St<br />
+                      Woburn, MA 01801<br />
                       United States
                     </p>
-                    <a href="#" className="mt-1 text-purple-600 hover:text-purple-800 inline-flex items-center text-sm">
+                    <a href="https://www.google.com/maps/place/Javelin+Biotech,+Inc./@42.4952029,-71.1259756,17z/data=!3m1!4b1!4m6!3m5!1s0x89e375aa30323e37:0xbc62ef8a04e53d1e!8m2!3d42.4952029!4d-71.1234007!16s%2Fg%2F11fswlb7yp?entry=ttu&g_ep=EgoyMDI1MDQyNy4xIKXMDSoASAFQAw%3D%3D" className="mt-1 text-purple-600 hover:text-purple-800 inline-flex items-center text-sm">
                       Get Directions
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 ml-1">
                         <path d="M5 12h14" />
@@ -134,7 +134,7 @@ const ContactPage = () => {
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="h-12 w-12 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600">
@@ -154,7 +154,7 @@ const ContactPage = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex">
                   <div className="flex-shrink-0">
                     <div className="h-12 w-12 rounded-lg bg-purple-100 flex items-center justify-center text-purple-600">
@@ -177,7 +177,7 @@ const ContactPage = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-12">
                 <h2 className="text-2xl font-bold mb-6 text-gray-900">Connect With Us</h2>
                 <div className="flex space-x-4">
@@ -186,7 +186,7 @@ const ContactPage = () => {
                       <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                     </svg>
                   </a>
-                  <a href="#" className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 hover:bg-purple-200 transition-colors">
+                  <a href="https://www.linkedin.com/company/javelin-biotech/posts/?feedView=all" className="h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 hover:bg-purple-200 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
                       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                       <rect x="2" y="9" width="4" height="12" />
@@ -201,16 +201,16 @@ const ContactPage = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Contact Form */}
             <div className="order-1 lg:order-2">
               <div className="bg-white rounded-lg shadow-lg p-8 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-purple-100 opacity-30 rounded-full transform translate-x-1/3 -translate-y-1/3"></div>
                 <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-orange-100 opacity-30 rounded-full transform -translate-x-1/3 translate-y-1/3"></div>
-                
+
                 <div className="relative z-10">
                   <h2 className="text-2xl font-bold mb-6 text-gray-900">Send Us a Message</h2>
-                  
+
                   <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 gap-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -228,7 +228,7 @@ const ContactPage = () => {
                             placeholder="John Doe"
                           />
                         </div>
-                        
+
                         <div>
                           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                             Email <span className="text-red-500">*</span>
@@ -245,7 +245,7 @@ const ContactPage = () => {
                           />
                         </div>
                       </div>
-                      
+
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                           <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
@@ -260,7 +260,7 @@ const ContactPage = () => {
                             placeholder="Your organization name"
                           />
                         </div>
-                        
+
                         <div>
                           <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                             Phone Number
@@ -276,7 +276,7 @@ const ContactPage = () => {
                           />
                         </div>
                       </div>
-                      
+
                       <div>
                         <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-700 mb-1">
                           Inquiry Type <span className="text-red-500">*</span>
@@ -299,7 +299,7 @@ const ContactPage = () => {
                           </SelectContent>
                         </Select>
                       </div>
-                      
+
                       <div>
                         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                           Message <span className="text-red-500">*</span>
@@ -314,11 +314,11 @@ const ContactPage = () => {
                           placeholder="Please describe how we can help you..."
                         />
                       </div>
-                      
+
                       <div className="flex items-center">
-                        <input 
-                          type="checkbox" 
-                          id="subscribeNewsletter" 
+                        <input
+                          type="checkbox"
+                          id="subscribeNewsletter"
                           name="subscribeNewsletter"
                           checked={formData.subscribeNewsletter}
                           onChange={handleCheckboxChange}
@@ -328,9 +328,9 @@ const ContactPage = () => {
                           Subscribe to our newsletter for updates on our technology and events
                         </label>
                       </div>
-                      
-                      <Button 
-                        type="submit" 
+
+                      <Button
+                        type="submit"
                         className={cn(
                           "w-full bg-purple-600 hover:bg-purple-700",
                           isSubmitting && "opacity-75 cursor-wait"
@@ -347,20 +347,19 @@ const ContactPage = () => {
           </div>
         </div>
       </section>
-      
-      {/* Map Section */}
-      <section className="py-12 bg-gray-50">
+
+
+      {/* <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold mb-8 text-center text-gray-900">Our Location</h2>
           <div className="h-96 bg-gray-200 rounded-lg overflow-hidden">
-            {/* This would be replaced with an actual map component */}
             <div className="w-full h-full bg-gray-300 flex items-center justify-center">
               <p className="text-gray-600 font-medium">Interactive Map Would Be Displayed Here</p>
             </div>
           </div>
         </div>
-      </section>
-      
+      </section> */}
+
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -368,7 +367,7 @@ const ContactPage = () => {
           <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
             Find quick answers to common questions about our technology and services.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-3 text-gray-900">What advantages does your LTC platform offer over traditional cell culture methods?</h3>
@@ -376,21 +375,21 @@ const ContactPage = () => {
                 Our LTC platform provides a more physiologically relevant microenvironment that better mimics human liver function, including fluid flow, 3D architecture, and multiple cell types. This results in more predictive data for drug development and toxicology studies.
               </p>
             </div>
-            
+
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-3 text-gray-900">How long does it typically take to set up an LTC experiment?</h3>
               <p className="text-gray-600">
                 Once you have received our platform, experimental setup can be completed in just 1-2 days, including cell seeding and stabilization. Our team provides comprehensive training and support throughout the process.
               </p>
             </div>
-            
+
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-3 text-gray-900">Can your technology be used for custom applications beyond standard liver models?</h3>
               <p className="text-gray-600">
                 Absolutely! We work closely with clients to develop customized configurations for specific research needs, including disease models, specialized cell types, and multi-organ systems. Contact our business development team to discuss your specific requirements.
               </p>
             </div>
-            
+
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-3 text-gray-900">What types of data can be collected from the LTC platform?</h3>
               <p className="text-gray-600">
@@ -398,15 +397,15 @@ const ContactPage = () => {
               </p>
             </div>
           </div>
-          
+
           <div className="text-center mt-12">
             <Button asChild className="bg-orange-600 hover:bg-orange-700">
-              <a href="/contact">View All FAQs</a>
+              <a href="info@javelinbiotech.com">Contact us to know more</a>
             </Button>
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );

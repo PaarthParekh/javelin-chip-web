@@ -43,7 +43,7 @@ const AboutPage = () => {
       image: "https://source.unsplash.com/photo-1507003211169-0a1dd7228f2d"
     }
   ];
-  
+
   const timeline: TimelineEvent[] = [
     {
       year: "2018",
@@ -86,7 +86,7 @@ const AboutPage = () => {
       description: "Established presence in Europe and Asia, with clients spanning 15 countries and all major pharma companies."
     }
   ];
-  
+
   const values = [
     {
       title: "Scientific Integrity",
@@ -134,11 +134,11 @@ const AboutPage = () => {
       )
     }
   ];
-  
+
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-800 to-purple-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -156,16 +156,11 @@ const AboutPage = () => {
             </div>
             <div className="md:w-1/2 relative">
               <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-orange-400 opacity-20 rounded-full blur-3xl"></div>
-              <img 
-                src="/lovable-uploads/aa2e95a7-f49c-4130-83ec-bc2cd7a9dd52.png" 
-                alt="Javelin Biotech Team" 
-                className="rounded-lg shadow-xl relative z-10 w-full"
-              />
             </div>
           </div>
         </div>
       </section>
-      
+
       {/* Our Story */}
       <section id="our-story" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -173,10 +168,10 @@ const AboutPage = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Story</h2>
             <div className="w-16 h-1 bg-purple-600 mx-auto mb-4"></div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Founded by leaders in bioengineering and pharmaceutical sciences, Javelin Biotech is revolutionizing drug development through advanced organ-on-chip technology.
+              At Javelin Biotech, we are engineers, problem-solvers, and pioneers in the realm of microphysiological systems (MPS) and organ-on-chip (OoC) platforms.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">The Beginning</h3>
@@ -205,7 +200,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Our Values */}
       <section className="py-20 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -216,7 +211,7 @@ const AboutPage = () => {
               These core principles guide everything we do at Javelin Biotech, from research and development to partnerships and customer relationships.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
@@ -230,7 +225,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Timeline */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -241,11 +236,11 @@ const AboutPage = () => {
               Key milestones in Javelin Biotech's evolution from startup to industry leader.
             </p>
           </div>
-          
+
           <div className="relative">
             {/* Timeline Line */}
             <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-purple-200"></div>
-            
+
             <div className="space-y-12">
               {timeline.map((event, index) => (
                 <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center`}>
@@ -256,12 +251,12 @@ const AboutPage = () => {
                       <p className="text-gray-600">{event.description}</p>
                     </div>
                   </div>
-                  
+
                   {/* Timeline Point */}
                   <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-purple-600 border-4 border-white items-center justify-center z-10">
                     <div className="w-2 h-2 rounded-full bg-white"></div>
                   </div>
-                  
+
                   <div className="md:w-1/2 p-4 md:pl-12">
                     {/* This side is empty for the layout to work */}
                   </div>
@@ -271,7 +266,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Leadership Team */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -282,14 +277,14 @@ const AboutPage = () => {
               Meet the experts driving our vision forward.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {leadership.map((member, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                 <div className="h-64 overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
+                  <img
+                    src={member.image}
+                    alt={member.name}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -301,7 +296,7 @@ const AboutPage = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <Button asChild className="bg-purple-600 hover:bg-purple-700">
               <a href="/contact">Join Our Team</a>
@@ -309,7 +304,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Partners Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -318,7 +313,7 @@ const AboutPage = () => {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
             We collaborate with leading pharmaceutical companies, research institutions, and government agencies to advance organ-on-chip technology.
           </p>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {[...Array(6)].map((_, i) => (
               <div key={i} className="h-20 flex items-center justify-center bg-gray-100 rounded-md px-6">
@@ -328,7 +323,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Call to Action */}
       <section className="py-16 bg-purple-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -341,7 +336,7 @@ const AboutPage = () => {
           </Button>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );

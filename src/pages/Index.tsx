@@ -12,7 +12,7 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Technology />
-      
+
       {/* Applications Preview Section */}
       <section className="py-20 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +23,7 @@ const Index = () => {
               Our LTC platform enables breakthroughs across multiple applications in pharmaceutical research and development.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all">
               <div className="h-48 bg-purple-600 flex items-center justify-center text-white">
@@ -41,7 +41,7 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all">
               <div className="h-48 bg-orange-500 flex items-center justify-center text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12">
@@ -63,7 +63,7 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all">
               <div className="h-48 bg-purple-600 flex items-center justify-center text-white">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-12 h-12">
@@ -84,7 +84,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="text-center">
             <Button asChild className="bg-purple-600 hover:bg-purple-700">
               <Link to="/applications">Explore All Applications</Link>
@@ -92,9 +92,9 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Product Preview */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -138,16 +138,16 @@ const Index = () => {
             </div>
             <div className="relative">
               <div className="absolute top-0 right-0 w-4/5 h-4/5 bg-purple-400 opacity-20 rounded-full blur-3xl -z-10"></div>
-              <img 
-                src="/lovable-uploads/279f40b1-bfc3-42ec-bb19-b9b37f27e875.png" 
-                alt="Javelin LTC Chip" 
+              <img
+                src="/lovable-uploads/279f40b1-bfc3-42ec-bb19-b9b37f27e875.png"
+                alt="Javelin LTC Chip"
                 className="rounded-lg shadow-xl w-full"
               />
             </div>
           </div>
         </div>
-      </section>
-      
+      </section> */}
+
       {/* Blog & News Preview */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -158,13 +158,13 @@ const Index = () => {
               Stay updated with the latest advancements in organ-on-chip technology and company news.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all">
               <div className="h-48 overflow-hidden">
-                <img 
-                  src="https://source.unsplash.com/photo-1485827404703-89b55fcc595e" 
-                  alt="Blog Post" 
+                <img
+                  src="https://source.unsplash.com/photo-1485827404703-89b55fcc595e"
+                  alt="Blog Post"
                   className="w-full h-full object-cover hover:scale-105 transition-transform"
                 />
               </div>
@@ -184,12 +184,12 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all">
               <div className="h-48 overflow-hidden">
-                <img 
-                  src="https://source.unsplash.com/photo-1518770660439-4636190af475" 
-                  alt="Blog Post" 
+                <img
+                  src="https://source.unsplash.com/photo-1518770660439-4636190af475"
+                  alt="Blog Post"
                   className="w-full h-full object-cover hover:scale-105 transition-transform"
                 />
               </div>
@@ -209,12 +209,12 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all">
               <div className="h-48 overflow-hidden">
-                <img 
-                  src="https://source.unsplash.com/photo-1487058792275-0ad4aaf24ca7" 
-                  alt="Blog Post" 
+                <img
+                  src="https://source.unsplash.com/photo-1487058792275-0ad4aaf24ca7"
+                  alt="Blog Post"
                   className="w-full h-full object-cover hover:scale-105 transition-transform"
                 />
               </div>
@@ -235,7 +235,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="text-center">
             <Button asChild className="bg-purple-600 hover:bg-purple-700">
               <Link to="/blog">View All News & Insights</Link>
@@ -243,7 +243,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-purple-800 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -255,13 +255,13 @@ const Index = () => {
             <Button asChild className="bg-white text-purple-700 hover:bg-gray-100">
               <Link to="/products">Explore Our Products</Link>
             </Button>
-            <Button asChild variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button asChild variant="outline" className="bg-white text-purple-700 hover:bg-gray-100">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );

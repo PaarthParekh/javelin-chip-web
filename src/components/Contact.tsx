@@ -14,7 +14,7 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -22,11 +22,11 @@ const Contact = () => {
       [name]: value
     }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast({
@@ -42,7 +42,7 @@ const Contact = () => {
       setIsSubmitting(false);
     }, 1000);
   };
-  
+
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,7 +53,7 @@ const Contact = () => {
             Interested in our technology? Let's discuss how we can help accelerate your drug development pipeline.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <div className="bg-gray-50 p-8 rounded-xl mb-8">
@@ -73,7 +73,7 @@ const Contact = () => {
                     <a href="mailto:info@javelinbiotech.com" className="text-biotech-600 hover:text-biotech-800">info@javelinbiotech.com</a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
                     <div className="h-10 w-10 rounded-full bg-biotech-100 flex items-center justify-center text-biotech-600">
@@ -85,12 +85,12 @@ const Contact = () => {
                   <div className="ml-4">
                     <p className="text-sm font-medium text-gray-900">Visit Us</p>
                     <p className="text-gray-600">
-                      100 Innovation Drive<br />
-                      Cambridge, MA 02142
+                      299 Washington St<br />
+                      Woburn, MA 01801
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
                     <div className="h-10 w-10 rounded-full bg-biotech-100 flex items-center justify-center text-biotech-600">
@@ -106,7 +106,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-biotech-700 rounded-xl p-8 text-white">
               <h3 className="text-xl font-semibold mb-4">Partnership Opportunities</h3>
               <p className="mb-4">
@@ -117,7 +117,7 @@ const Contact = () => {
               </Button>
             </div>
           </div>
-          
+
           <div className="bg-white rounded-xl shadow-lg p-8">
             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h3>
             <form onSubmit={handleSubmit}>
@@ -135,7 +135,7 @@ const Contact = () => {
                     className="w-full"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                     Email
@@ -150,7 +150,7 @@ const Contact = () => {
                     className="w-full"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
                     Company / Institution
@@ -163,7 +163,7 @@ const Contact = () => {
                     className="w-full"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                     Message
@@ -177,15 +177,15 @@ const Contact = () => {
                     className="w-full min-h-[150px]"
                   />
                 </div>
-                
-                <Button 
-                  type="submit" 
-                  className="w-full bg-biotech-600 hover:bg-biotech-700" 
+
+                <Button
+                  type="submit"
+                  className="w-full bg-biotech-600 hover:bg-biotech-700"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
-                
+
                 <p className="text-xs text-gray-500 mt-4">
                   By submitting this form, you agree to our privacy policy and terms of service.
                 </p>

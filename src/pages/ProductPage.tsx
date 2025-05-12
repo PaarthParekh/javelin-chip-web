@@ -8,7 +8,7 @@ const ProductPage = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-purple-800 to-purple-700 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -26,12 +26,12 @@ const ProductPage = () => {
             <circle cx="400" cy="400" r="150" fill="white" opacity="0.1" filter="url(#glow)" />
           </svg>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative py-20 md:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Liver-Tissue-Chip 
+                Liver-Tissue-Chip
                 <span className="text-orange-300"> (LTC) Platform</span>
               </h1>
               <p className="text-lg mb-8 max-w-xl">
@@ -41,13 +41,13 @@ const ProductPage = () => {
                 <a href="#features">Explore Features</a>
               </Button>
             </div>
-            
+
             <div className="relative flex justify-center">
               <div className="absolute inset-0 bg-orange-400 opacity-20 rounded-full blur-3xl"></div>
-              <div className="glass-panel p-6 rounded-xl shadow-2xl animate-fade-up" style={{animationDelay: "0.3s"}}>
-                <img 
+              <div className="glass-panel p-6 rounded-xl shadow-2xl animate-fade-up" style={{ animationDelay: "0.3s" }}>
+                <img
                   src="/lovable-uploads/279f40b1-bfc3-42ec-bb19-b9b37f27e875.png"
-                  alt="LTC Chip" 
+                  alt="LTC Chip"
                   className="rounded-lg w-full"
                 />
                 <div className="mt-4 text-center">
@@ -59,14 +59,14 @@ const ProductPage = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 120L48 110C96 100 192 80 288 75C384 70 480 80 576 85C672 90 768 90 864 80C960 70 1056 50 1152 45C1248 40 1344 50 1392 55L1440 60V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0Z" fill="white"/>
+            <path d="M0 120L48 110C96 100 192 80 288 75C384 70 480 80 576 85C672 90 768 90 864 80C960 70 1056 50 1152 45C1248 40 1344 50 1392 55L1440 60V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0Z" fill="white" />
           </svg>
         </div>
       </section>
-      
+
       {/* Interactive Features Section */}
       <section id="features" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -77,7 +77,7 @@ const ProductPage = () => {
               Our innovative platform combines advanced microfluidics, tissue engineering, and real-time monitoring for unprecedented liver modeling capabilities.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="order-2 lg:order-1">
               <h3 className="text-2xl font-bold mb-6 text-purple-700">Advanced Microfluidic System</h3>
@@ -107,20 +107,20 @@ const ProductPage = () => {
             </div>
             <div className="order-1 lg:order-2 relative">
               <div className="absolute top-0 right-0 w-4/5 h-4/5 bg-orange-400 opacity-10 rounded-full blur-3xl"></div>
-              <img 
-                src="/lovable-uploads/aa2e95a7-f49c-4130-83ec-bc2cd7a9dd52.png" 
-                alt="Microfluidic System" 
+              <img
+                src="/LTCchip.png"
+                alt="Microfluidic System"
                 className="rounded-lg shadow-xl w-full relative z-10"
               />
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="relative">
               <div className="absolute top-0 left-0 w-4/5 h-4/5 bg-purple-400 opacity-10 rounded-full blur-3xl"></div>
-              <img 
-                src="/lovable-uploads/dfcc8a55-cea3-4d10-90e0-0a33578dac10.png" 
-                alt="Cell Integration" 
+              <img
+                src="/LTCmulticell.png"
+                alt="Cell Integration"
                 className="rounded-lg shadow-xl w-full relative z-10"
               />
             </div>
@@ -151,10 +151,10 @@ const ProductPage = () => {
               </ul>
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="order-2 lg:order-1">
-              <h3 className="text-2xl font-bold mb-6 text-purple-700">Integrated Sensing Technology</h3>
+              <h3 className="text-2xl font-bold mb-6 text-purple-700">Controlled Flow through the Chip</h3>
               <p className="text-gray-600 mb-6">
                 The LTC incorporates multiple non-invasive sensors for real-time monitoring of key physiological parameters and cellular responses.
               </p>
@@ -181,16 +181,16 @@ const ProductPage = () => {
             </div>
             <div className="order-1 lg:order-2 relative">
               <div className="absolute top-0 right-0 w-4/5 h-4/5 bg-orange-400 opacity-10 rounded-full blur-3xl"></div>
-              <img 
-                src="/lovable-uploads/279f40b1-bfc3-42ec-bb19-b9b37f27e875.png" 
-                alt="Sensing Technology" 
+              <img
+                src="/Flow+chip.png"
+                alt="Sensing Technology"
                 className="rounded-lg shadow-xl w-full relative z-10"
               />
             </div>
           </div>
         </div>
       </section>
-      
+
       {/* Summary Visualization Section */}
       <section className="py-20 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -201,7 +201,7 @@ const ProductPage = () => {
               Our integrated platform delivers unprecedented capabilities for drug development, disease modeling, and precision medicine applications.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-xl shadow-xl overflow-hidden">
             <div className="p-8 md:p-12">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -218,7 +218,7 @@ const ProductPage = () => {
                   <h3 className="text-lg font-bold mb-2 text-gray-900">Microfluidics</h3>
                   <p className="text-gray-600">Recreates physiological fluid flow and mechanical forces critical for liver function</p>
                 </div>
-                
+
                 <div className="bg-orange-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
                   <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-orange-600">
@@ -228,7 +228,7 @@ const ProductPage = () => {
                   <h3 className="text-lg font-bold mb-2 text-gray-900">Cell Integration</h3>
                   <p className="text-gray-600">Supports multiple primary human cell types to recreate liver complexity</p>
                 </div>
-                
+
                 <div className="bg-purple-50 rounded-lg p-6 text-center hover:shadow-md transition-shadow">
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-purple-600">
@@ -239,12 +239,12 @@ const ProductPage = () => {
                   <p className="text-gray-600">Built-in sensors capture vital data for comprehensive analysis</p>
                 </div>
               </div>
-              
+
               <div className="mt-12 text-center">
                 <p className="text-gray-600 mb-8 max-w-3xl mx-auto">
                   Our LTC platform maintains functionality for extended study periods, enabling both acute and chronic testing protocols with reliable, reproducible results.
                 </p>
-                
+
                 <div className="inline-flex flex-wrap justify-center gap-4">
                   <span className="py-2 px-4 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Metabolism Studies</span>
                   <span className="py-2 px-4 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">Toxicity Screening</span>
@@ -257,7 +257,7 @@ const ProductPage = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-purple-800 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -275,7 +275,7 @@ const ProductPage = () => {
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   );

@@ -1,5 +1,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Technology = () => {
   const features = [
@@ -32,16 +34,6 @@ const Technology = () => {
       )
     },
     {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of cellular responses using embedded biosensors and imaging capabilities.",
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-purple-600">
-          <path d="m3 3 7.07 16.97 2.51-7.39 7.39-2.51L3 3z" />
-          <path d="m13 13 6 6" />
-        </svg>
-      )
-    },
-    {
       title: "Multi-Organ Systems",
       description: "Connect multiple organ models to study complex inter-organ interactions and systemic drug effects.",
       icon: (
@@ -53,7 +45,7 @@ const Technology = () => {
       )
     }
   ];
-  
+
   return (
     <section id="technology" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +56,7 @@ const Technology = () => {
             Javelin's proprietary organ-on-chip platform enables more accurate modeling of human physiology for better drug development decisions.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
           <div className="flex flex-col justify-center">
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Advanced Microfluidic Design</h3>
@@ -74,20 +66,23 @@ const Technology = () => {
             <p className="text-gray-600">
               By integrating multiple cell types within a physiologically relevant 3D structure, we enable more predictive modeling of drug effects than traditional in vitro methods, leading to better translation to human outcomes.
             </p>
+            <Button asChild variant="ghost" className="text-purple-700 hover:text-purple-800 p-0">
+              <Link to="/products">Explore Our Technology →</Link>
+            </Button>
           </div>
           <div className="flex justify-center items-center">
             <div className="relative w-full max-w-md">
               <div className="absolute top-0 right-0 w-4/5 h-4/5 bg-orange-400 opacity-20 rounded-full blur-3xl -z-10"></div>
-              <img 
-                src="https://source.unsplash.com/photo-1485827404703-89b55fcc595e" 
-                alt="Microfluidic chip design" 
+              <img
+                src="/Controller_Chip_chip.png"
+                alt="Microfluidic chip design"
                 className="rounded-lg shadow-xl w-full"
               />
             </div>
           </div>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <Card key={index} className="border border-gray-100 hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
